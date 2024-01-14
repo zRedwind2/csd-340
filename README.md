@@ -1,2 +1,4 @@
-# csd-340
-This is a repository for my csd-340 class.
+# CSD 340 Web Development with HTML and CSS</h1>
+## Contributors
+..* Darren Osier
+..* Louis Capps
