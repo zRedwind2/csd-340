@@ -1,0 +1,48 @@
+h1{
+	text-align: center;	
+	color: #6F1D1B
+}
+
+.image-gallery{
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	margin-top: 10%;
+	
+}
+
+.grid1{
+	grid-column-start: 1;
+	border: 3px solid #6F1D1B;
+}
+
+.grid2{
+	grid-column-start: 2;
+	border: 3px solid #6F1D1B;
+}
+
+.grid3{
+	grid-column-start: 3;
+	border: 3px solid #6F1D1B;
+}
+
+h3{
+	text-align: center;
+	color: #6F1D1B
+}
+
+figure {
+	text-align: center;
+}
+
+figcaption{
+	font-style: italic;
+	font-size: .75em;
+}
+
+.last{
+	width: 100%; 
+	margin-top: 10%;
+	float: right;
+    margin-bottom: 20px;
+}

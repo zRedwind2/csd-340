@@ -43,11 +43,11 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: red;
+}
+
 a:hover {
     text-decoration: underline;
     color: #D6A800;
-}
-
-a:visited {
-    color: red;
 }
