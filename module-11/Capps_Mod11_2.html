@@ -1,0 +1,67 @@
+<!-- Louis Capps : Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description"
+      content="A web page for Assignment 10.3." >
+    <meta name="keywords"
+      content="assignment, webpage, javascript" >
+    <meta name="robots"
+      content="nofollow" >
+    <meta name="author"
+      content="Louis Capps" >
+	<script>
+	// Creating needed array
+	var list = [];
+	function addToArray(){
+		// This function takes the input from the text field with ID newItem and puts into the array.
+		// It then informs the user through an alert what value was added at what index.
+		var input = document.getElementById("newItem").value;
+		document.getElementById("newItem").value = "";
+		list.push(input);
+		alert(input + " was added to the array at index " + (list.length));
+	};
+	
+	 function deleteFromArray(){
+		// This function removes the top element from the array. It informs the user what
+		// element was removed from which index.
+		var value = list.length - 1;
+	 	alert(list[value] + " was removed from the array at index " + (list.length));
+		var deletedItem = list.pop();
+	 }
+	 
+	 function displayArray(){
+		// This function loops through the array adding each element to a string. 
+		// It then changes the html innerHTML with id displayList to that string.
+		var string = "";
+		for  (var i = 0; i < list.length; i++){
+			var tempString = string;
+			var itemNumber = i + 1;
+			string = tempString.concat("Item " + itemNumber + " = " + list[i] + "<br>");
+		} 
+		document.getElementById("displayList").innerHTML = string;
+	 }
+	</script>
+</head>
+
+<body>
+	<header>
+     <h1> Assignment 11.2: JavaScript - Part 3 </h1>
+	</header> 
+
+      This is an interactive To Do List. Type in your first item in the text book, then click Add. Click the Display button to see
+	  current items in the list. Click on Delete Last Entry if you'd like to remove the last entry.
+	  <br><br>
+	  <input type="text" id="newItem" name="item"> 
+	  <button onclick="addToArray()">Add</button>
+	  <button onclick="deleteFromArray()">Delete Last Entry</button>
+	  <button onclick="displayArray()">Display</button>
+	  <br><br>
+	  <p id="displayList"></p>
+	<footer>
+	 <a href="../index.html" style="float: right;">Back to Landing Page</a>
+	</footer>
+</body>
+
+</html>
