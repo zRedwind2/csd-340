@@ -1,0 +1,58 @@
+h1{
+	text-align: center;
+}
+
+h3{
+	font-weight: 500;
+}
+
+li{
+	font-weight: 300;
+}
+
+.left{
+  width: 45%; 
+  float: left;  
+  border: 1px solid red;
+  border-radius: 15px; 
+  padding: 10px; 
+
+}
+
+ol{
+	list-style: inside decimal;
+}
+
+ul{
+	list-style-type: upper-roman;
+}
+
+.right{
+  width: 45%; 
+  float: right;  
+  border: 1px dashed red;
+  border-radius: 15px; 
+  padding: 10px; 
+
+}
+
+.last{
+	width: 100%; 
+	margin-top: 60%;
+	float: right;
+    margin-bottom: 20px;
+}
+
+a{
+    color: #4f42b5;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #D6A800;
+}
+
+a:visited{
+    color: red;
+}

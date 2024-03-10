@@ -1,0 +1,83 @@
+<!-- Louis Capps : Assignment 3.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>CSD 340 Development with HTML and CSS</title>
+    <link href="Capps_Mod12_2.css" type="text/css" rel="stylesheet" >
+	<script>
+	// Creating needed array
+	var list = [
+		"5e D&D Player's Handbook",
+		"5e D&D Dungeon Masters Guide",
+		"5e Monster Manual",
+		"Eragon",
+		"Eldest",
+		"Brisingr",
+		"Inheritance",
+		"Castle Ravenloft",
+		"Dragon of Icespire Peak",
+		"Xanathar's Guide to Everything"
+	];
+	function ascendingOrder(){
+		// This function loops through the array adding each element to a string. 
+		// It then changes the html innerHTML with id favoriteList to that string.
+		var string = "";
+		for  (var i = 0; i < list.length; i++){
+			var tempString = string;
+			string = tempString.concat("<li>" + list[i] + "</li>");
+		} 
+		document.getElementById("favoriteList").innerHTML = string;
+	 }
+	 function descendingOrder(){
+		// This function loops through the array in reverse adding each element to a string. 
+		// It also edits the list value to show the numbered ordered in reverse.
+		// It then changes the html innerHTML with id favoriteList to that string.
+		var string = "";
+		for  (var i = 0; i < list.length; i++){
+			var tempString = string;
+			x = list.length - i - 1;
+			string = tempString.concat('<li value="' + (x+1) + '">' +  list[x] + "</li>");
+//			string = tempString.concat("<li>" + list[x] + "</li>");
+		} 
+		document.getElementById("favoriteList").innerHTML = string;
+	 }
+	</script>
+</head>
+
+<body>
+     <div id="container">
+	  <h1> Assignment 3.3: Build a Web Page Exercise - Part 3 </h1>
+	  <div class="left">
+	   <h3> Top 10 Favorite Books </h3>
+	   <button onclick="ascendingOrder()">Top to Bottom</button>
+	   <button onclick="descendingOrder()">descendingOrder</button>
+	   <ol id="favoriteList">
+	    <li> 5e D&D Player's Handbook </li>
+		<li> 5e D&D Dungeon Masters Guide </li>
+		<li> 5e Monster Manual </li>
+		<li> Eragon </li>
+		<li> Eldest </li>
+		<li> Brisingr </li>
+		<li> Inheritance </li>
+		<li> Castle Ravenloft </li>
+		<li> Dragon of Icespire Peak </li>
+		<li> Xanathar's Guide to Everything </li>
+	   </ol>
+	  </div>
+	  <div class="right">
+	   <h3> 5 Things I've Learned Since this Course Started </h3>
+		<ul>
+		 <li> Basic HTML Code </li>
+		 <li> div classes </li>
+		 <li> meta tags </li>
+		 <li> Linking CSS to HTML </li>
+		 <li> Changing list styles </li>
+		</ul> 
+	   </div>
+	   <div class="last">
+        <a href="../index.html" style="float: right;">Back to Landing Page</a>
+	   </div>
+	</div>
+</body>
+
+</html>
